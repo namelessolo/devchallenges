@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;1,700&family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.header {
+  margin: 70px auto 80px 12px;
+}
+
+.header__title {
+  font-family: "PT Serif";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.25rem;
+  line-height: 48px;
+  letter-spacing: -0.045em;
+  margin-bottom: 35px;
+}
+
+.header__details {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 27px;
+  margin-bottom: 10px;
+}
+
+.header__story {
+  font-family: Poppins;
+  font-size: 0.875rem;
+  line-height: 21px;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 40px;
+}
+
+.photo {
+  position: relative;
+}
+
+.photo:nth-child(even) {
+  justify-self: start;
+  transform: translateY(50px);
+}
+
+.photo:nth-child(odd) {
+  justify-self: end;
+}
+
+.photo__img {
+  height: 210px;
+  width: 140px;
+}
+
+.photo__caption {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 21px;
+}
+
+.photo__caption--transform {
+  position: absolute;
+  top: -13px;
+  left: 145px;
+  width: 100%;
+  transform-origin: bottom left;
+  transform: rotate(90deg);
+  font-family: "PT Serif";
+  font-size: 0.625rem;
+  line-height: 13px;
+  text-transform: uppercase;
+}
