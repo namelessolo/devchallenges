@@ -1,1 +1,132 @@
 @import "reset";
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@400;700&family=Montserrat:wght@300;500;600;700&display=swap");
+
+body {
+  background-color: #181719;
+}
+
+.wrapper {
+  margin: 20px 12px;
+  color: $color;
+}
+
+.navbar__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  border: 1px solid $color;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  line-height: 16px;
+  font-family: $font_one;
+  font-weight: 200;
+  width: 105px;
+  padding: 8px;
+  transition: transform 0.5s ease;
+
+  &--active {
+    transform: translateX(-200%);
+  }
+}
+
+.hamburger {
+  padding: 10px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  &__box {
+    width: 30px;
+    height: 20px;
+    position: relative;
+  }
+
+  &__inner {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: white;
+      left: 0;
+    }
+
+    &::before {
+      top: 8px;
+    }
+
+    &::after {
+      top: -8px;
+    }
+  }
+}
+
+.list {
+  position: absolute;
+  width: 100%;
+  transform: translateX(-100%);
+  height: calc(100vh - 55px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 55px;
+  left: 0;
+  transition: transform 0.5s ease;
+
+  &--active {
+    transform: translateX(0);
+  }
+
+  &__item {
+    margin: 32px;
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: $font_three;
+    font-size: 1.125rem;
+    line-height: 22px;
+    font-weight: 500;
+    color: $color;
+
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}
+
+.text-card {
+  margin-top: 40px;
+
+  &__title {
+    font-family: $font_two;
+    font-size: 2.25rem;
+    line-height: 46px;
+    font-weight: 400;
+    margin-bottom: 25px;
+  }
+
+  &__story {
+    font-family: $font_three;
+    font-size: 0, 875rem;
+    line-height: 17, 07px;
+    font-weight: 300;
+    margin-bottom: 25px;
+  }
+}

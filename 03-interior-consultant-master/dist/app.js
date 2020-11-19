@@ -1,9 +1,10 @@
 const hamburger = document.querySelector(".hamburger");
-const navigation = document.querySelector(".navigation");
+const list = document.querySelector(".list");
+const logo = document.querySelector(".logo");
 
-function handleClick() {
-  hamburger.classList.toggle("hamburger--active");
-  navigation.classList.toggle("navigation--active");
+hamburger.addEventListener("click", showList);
+
+function showList() {
+  list.classList.toggle("list--active");
+  logo.classList.toggle("logo--active");
 }
-
-hamburger.addEventListener("click", handleClick);
