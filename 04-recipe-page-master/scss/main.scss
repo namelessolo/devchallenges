@@ -1,8 +1,90 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap");
 
 @import "./reset";
+@import "variables";
 
 .wrapper {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 20px auto;
+}
+
+.header {
+  margin: 12px;
+
+  &__title {
+    font-family: $primary-font;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 12px 0;
+  }
+  &__story {
+    display: flex;
+    align-items: flex-start;
+    font-family: $second-font;
+    font-size: 0.75rem;
+    line-height: 15px;
+  }
+
+  &__icon {
+    padding: 4px 10px 0 0;
+  }
+}
+
+.photo {
+  margin: 12px;
+  border-radius: 12px;
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.recpt-info {
+  margin: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+
+  &__item {
+    display: grid;
+    justify-content: start;
+    align-items: center;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto auto;
+    column-gap: 5px;
+  }
+
+  &__item--first {
+    grid-column: 1/ -1;
+  }
+  & .material-icons {
+    font-size: 20px;
+    grid-column: 1 / 2;
+    grid-row: 1 /3;
+
+    &--first {
+      color: #f2994a;
+    }
+  }
+  &__type {
+    font-size: 0.5rem;
+    font-family: $second-font;
+    color: $grey4;
+    line-height: 10px;
+    font-weight: 700;
+  }
+
+  &__prop {
+    font-size: 0.625rem;
+    font-family: $second-font;
+    color: $grey1;
+    line-height: 12px;
+    font-weight: 500;
+
+    &--first {
+      color: #f2994a;
+    }
+  }
 }
