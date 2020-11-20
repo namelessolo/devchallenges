@@ -177,8 +177,10 @@ body {
 
 .photo {
   margin-top: 26px;
-  position: relative;
-  z-index: 1;
+
+  &__wrapper {
+    position: relative;
+  }
 
   &__img {
     width: 100%;
@@ -231,4 +233,4 @@ body {
   }
 }
 
-@import "mobile";
+@import "desktop";

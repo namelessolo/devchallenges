@@ -208,8 +208,10 @@ body {
 
 .photo {
   margin-top: 26px;
+}
+
+.photo__wrapper {
   position: relative;
-  z-index: 1;
 }
 
 .photo__img {
@@ -269,7 +271,7 @@ body {
   line-height: 23px;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1000px) {
   .wrapper {
     max-width: 1440px;
   }
