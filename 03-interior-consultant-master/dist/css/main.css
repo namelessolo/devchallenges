@@ -13,6 +13,14 @@ body {
 }
 
 .wrapper {
+  margin: 0 auto;
+  max-width: 500px;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.container {
   margin: 20px 12px;
   color: #ffffff;
 }
@@ -39,15 +47,6 @@ body {
   font-weight: 200;
   width: 105px;
   padding: 8px;
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-}
-
-.logo--active {
-  -webkit-transform: translateX(-200%);
-          transform: translateX(-200%);
 }
 
 .hamburger {
@@ -55,6 +54,24 @@ body {
   background-color: transparent;
   border: 0;
   cursor: pointer;
+}
+
+.hamburger__mobile {
+  position: absolute;
+  top: 20px;
+  right: 12px;
+  -webkit-transform: translateX(-500px);
+          transform: translateX(-500px);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  z-index: 3;
+}
+
+.hamburger__mobile--active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .hamburger__box {
@@ -94,9 +111,9 @@ body {
 .list {
   position: absolute;
   width: 100%;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  height: calc(100vh - 55px);
+  -webkit-transform: translateX(-500px);
+          transform: translateX(-500px);
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,12 +127,14 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  top: 55px;
+  top: 0;
   left: 0;
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  background-color: #181719;
+  z-index: 2;
 }
 
 .list--active {
@@ -155,9 +174,80 @@ body {
 
 .text-card__story {
   font-family: "Montserrat", sans-serif;
-  font-size: 0, 875rem;
-  line-height: 17, 07px;
+  font-size: 0.875rem;
+  line-height: 17.07px;
   font-weight: 300;
   margin-bottom: 25px;
+}
+
+.text-card__link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.photo {
+  margin-top: 26px;
+  position: relative;
+  z-index: 1;
+}
+
+.photo__img {
+  width: 100%;
+  height: auto;
+}
+
+.person {
+  width: 80%;
+  padding: 13px 23px 25px;
+  background-color: #181719;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr;
+      grid-template-columns: 50px 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 85%;
+  left: 15%;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.person__img {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+}
+
+.person__name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 15px;
+}
+
+.person__job {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.625rem;
+  line-height: 12px;
+  color: #828282;
+}
+
+.person__story {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  font-family: Lora;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
 }
 /*# sourceMappingURL=main.css.map */

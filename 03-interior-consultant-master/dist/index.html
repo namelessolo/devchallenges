@@ -8,32 +8,53 @@
   </head>
   <body>
     <div class="wrapper">
-      <nav class="navbar">
-        <div class="navbar__wrapper">
-          <div class="logo">This Interior</div>
-          <button class="hamburger">
+      <div class="container">
+        <nav class="navbar">
+          <div class="navbar__wrapper">
+            <div class="logo">This Interior</div>
+            <button class="hamburger">
+              <div class="hamburger__box">
+                <div class="hamburger__inner"></div>
+              </div>
+            </button>
+          </div>
+          <ul class="list">
+            <li class="list__item"><a href="#" class="list__link">Home</a></li>
+            <li class="list__item">
+              <a href="#" class="list__link">Collection</a>
+            </li>
+            <li class="list__item"><a href="#" class="list__link">About</a></li>
+            <li class="list__item">
+              <a href="#" class="list__link">Contact</a>
+            </li>
+          </ul>
+          <button class="hamburger hamburger__mobile">
             <div class="hamburger__box">
               <div class="hamburger__inner"></div>
             </div>
           </button>
-        </div>
-        <ul class="list">
-          <li class="list__item"><a href="" class="list__link">Home</a></li>
-          <li class="list__item">
-            <a href="" class="list__link">Collection</a>
-          </li>
-          <li class="list__item"><a href="" class="list__link">About</a></li>
-          <li class="list__item"><a href="" class="list__link">Contact</a></li>
-        </ul>
-      </nav>
-      <section class="text-card">
-        <h1 class="text-card__title">Modern interior</h1>
-        <p class="text-card__story">
-          A full-Service residential & commercial interior design and staging
-          company offering professional organizing & eco-services.
-        </p>
-        <button class="btn">Read more -></button>
-      </section>
+        </nav>
+        <section class="text-card">
+          <h1 class="text-card__title">Modern interior</h1>
+          <p class="text-card__story">
+            A full-Service residential & commercial interior design and staging
+            company offering professional organizing & eco-services.
+          </p>
+          <a href="#" class="text-card__link">Read more</a>
+        </section>
+        <section class="photo">
+          <img src="./img/photo1.png" alt="" class="photo__img" />
+          <div class="person">
+            <img src="./img/photo2.png" alt="" class="person__img" />
+            <div class="person__data">
+              <h4 class="person__name">Aliza Webber</h4>
+              <p class="person__job">Aliza Webber</p>
+            </div>
+            <p class="person__story">Designed in 2020</p>
+            <p class="person__story">Aliza Webber</p>
+          </div>
+        </section>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>

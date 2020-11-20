@@ -1,10 +1,11 @@
-const hamburger = document.querySelector(".hamburger");
+const hamburger = document.querySelectorAll(".hamburger");
 const list = document.querySelector(".list");
 const logo = document.querySelector(".logo");
+const mobile = document.querySelector(".hamburger__mobile");
 
-hamburger.addEventListener("click", showList);
+hamburger.forEach((btn) => btn.addEventListener("click", showList));
 
 function showList() {
   list.classList.toggle("list--active");
-  logo.classList.toggle("logo--active");
+  mobile.classList.toggle("hamburger__mobile--active");
 }
