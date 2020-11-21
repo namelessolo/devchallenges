@@ -1,20 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap");
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.wrapper {
+.container {
+  margin: 0 auto;
   max-width: 500px;
-  margin: 20px auto;
 }
 
 .header {
-  margin: 12px;
+  margin: 0 12px;
 }
 
 .header__title {
@@ -30,8 +30,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   font-family: "Montserrat";
   font-size: 0.75rem;
   line-height: 15px;
@@ -42,7 +42,7 @@
 }
 
 .photo {
-  margin: 12px;
+  margin: 20px 12px 0;
   border-radius: 12px;
 }
 
@@ -52,29 +52,37 @@
 }
 
 .recpt-info {
-  margin: 12px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 20px 0;
+  margin: 0 8px;
 }
 
 .recpt-info__item {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  grid-template-columns: auto auto;
   -webkit-column-gap: 5px;
-          column-gap: 5px;
+  column-gap: 5px;
+  row-gap: 2px;
 }
 
 .recpt-info__item--first {
@@ -113,5 +121,147 @@
 
 .recpt-info__prop--first {
   color: #f2994a;
+}
+
+.ingredients {
+  margin: 0 12px;
+}
+
+.ingredients__title {
+  margin: 10px 0 15px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  font-family: "Montserrat";
+}
+
+.ingredients__product {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.125rem;
+  margin-bottom: 15px;
+}
+
+.ingredients div {
+  margin-bottom: 5px;
+}
+
+.ingredients label {
+  font-size: 0.875rem;
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+
+.ingredients__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fafafa;
+  border: 1px solid #828282;
+  padding: 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.ingredients__input:checked {
+  background-color: green;
+}
+
+.instructions {
+  margin: 12px;
+}
+
+.instructions__title {
+  font-size: 1.5rem;
+  font-family: "Playfair Display";
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.instructions__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin-bottom: 12px;
+}
+
+.instructions__number {
+  width: 36px;
+  height: 36px;
+  background-color: #f2994a;
+  border-radius: 6px;
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Playfair Display";
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.instructions__story {
+  width: 100%;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Montserrat";
+}
+
+@media (min-width: 800px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 30%;
+    grid-template-columns: auto 30%;
+    max-width: 1200px;
+    -webkit-column-gap: 150px;
+    column-gap: 150px;
+  }
+  .header {
+    grid-column: 1/-1;
+  }
+  .photo {
+    grid-column: 1/-1;
+  }
+  .recpt-info {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 216px;
+    height: 370px;
+    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+  .ingredients {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  .instructions {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
 }
 /*# sourceMappingURL=main.css.map */
