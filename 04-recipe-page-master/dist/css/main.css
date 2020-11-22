@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap");
 *,
 *::after,
 *::before {
@@ -35,6 +35,8 @@
   font-family: "Montserrat";
   font-size: 0.75rem;
   line-height: 15px;
+  font-style: italic;
+  font-weight: 500;
 }
 
 .header__icon {
@@ -65,6 +67,7 @@
   background-color: white;
   padding: 20px 0;
   margin: 0 8px;
+  z-index: 2;
 }
 
 .recpt-info__item {
@@ -153,6 +156,8 @@
 }
 
 .ingredients__input {
+  position: relative;
+  top: 3px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -189,24 +194,19 @@
 }
 
 .instructions__number {
-  width: 36px;
   height: 36px;
+  width: 36px;
   background-color: #f2994a;
   border-radius: 6px;
   margin-right: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: stretch center;
   font-family: "Playfair Display";
   font-size: 1.5rem;
   color: #ffffff;
   line-height: 32px;
+  font-weight: 700;
 }
 
 .instructions__story {
@@ -214,6 +214,14 @@
   font-weight: 400;
   font-size: 1rem;
   font-family: "Montserrat";
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
 }
 
 @media (min-width: 800px) {
