@@ -1,3 +1,140 @@
-.elo {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import "reset";
+
+.container {
+  max-width: 800px;
+  margin: 30px auto 30px;
+}
+
+.main {
+  margin: 0 12px;
+}
+
+.person {
+  font-family: "Montserrat";
+  margin-bottom: 12px;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    object-fit: cover;
+  }
+
+  &__name {
+    font-size: 0.875rem;
+    color: #4e5150;
+    margin-bottom: 4px;
+  }
+
+  &__place {
+    font-size: 0.625rem;
+    color: #a9a9a9;
+  }
+}
+
+.info {
   display: flex;
+  gap: 12px;
+  justify-content: center;
+  font-family: "Montserrat";
+  font-size: 0.875rem;
+  margin-bottom: 40px;
+
+  &__box {
+    width: 80px;
+    height: 50px;
+    background-color: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-size: 0.75rem;
+  }
+
+  &__num {
+    color: #4e5150;
+  }
+
+  &__text {
+    color: #bdbdbd;
+  }
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: dense;
+  gap: 0.75em;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    grid-row: span 1;
+    grid-column: span 1;
+    border-radius: 14px;
+
+    &--width {
+      grid-column: span 2;
+    }
+
+    &--height {
+      grid-row: span 2;
+    }
+  }
+}
+
+@media (min-width: 801px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .main {
+    margin: 0 12px;
+  }
+
+  .person {
+    &__img {
+      width: 160px;
+      height: 160px;
+    }
+
+    &__name {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    &__place {
+      font-size: 0.875rem;
+    }
+  }
+
+  .info {
+    margin-bottom: 64px;
+    gap: 24px;
+
+    &__box {
+      width: 100px;
+      height: 68px;
+    }
+
+    &__num {
+      font-size: 1.125rem;
+    }
+
+    &__text {
+      font-size: 0.875rem;
+    }
+  }
+
+  .photos {
+    gap: 32px;
+  }
 }

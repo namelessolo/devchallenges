@@ -1,95 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,
-  maximum-scale=5"
-    />
-
-    <link rel="icon" href="devchallenges.png" />
-
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://devchallenges.io/"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Devchallenges</title>
-
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      ul {
-        padding-left: 24px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Document</title>
   </head>
   <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
-
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
-      </div>
-
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
+    <div class="container">
+      <main class="main">
+        <section class="person">
+          <figure class="person__box">
+            <img src="./img/profilePhoto.png" alt="" class="person__img" />
+            <figcaption class="person__name">Rodney Cotton</figcaption>
+            <figcaption class="person__place">Helsinki, Finland</figcaption>
+          </figure>
+        </section>
+        <section class="info">
+          <div class="info__box">
+            <p class="info__num">100</p>
+            <p class="info__text">Posts</p>
+          </div>
+          <div class="info__box">
+            <p class="info__num">2,242</p>
+            <p class="info__text">Followers</p>
+          </div>
+          <div class="info__box">
+            <p class="info__num">1,432</p>
+            <p class="info__text">Following</p>
+          </div>
+        </section>
+        <section class="photos">
+          <img src="./img/photo1.png" alt="" class="photos__img" />
+          <img
+            src="./img/photo2.png"
+            alt=""
+            class="photos__img photos__img--width"
+          />
+          <img
+            src="./img/photo3.png"
+            alt=""
+            class="photos__img photos__img--width"
+          />
+          <img
+            src="./img/photo4.png"
+            alt=""
+            class="photos__img photos__img--height"
+          />
+          <img src="./img/photo5.png" alt="" class="photos__img" />
+          <img src="./img/photo6.png" alt="" class="photos__img" />
+        </section>
+      </main>
     </div>
   </body>
 </html>
