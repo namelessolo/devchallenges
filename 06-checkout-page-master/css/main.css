@@ -206,7 +206,7 @@ body {
 }
 
 .form-checkout__label {
-  color: #333333;
+  color: #4f4f4f;
   font-size: 0.625rem;
   margin-bottom: 5px;
 }
@@ -217,6 +217,15 @@ body {
   font-size: 0.75rem;
   padding: 8px 8px 8px 44px;
   margin-bottom: 17px;
+}
+
+.form-checkout__input--select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-size: 0.75rem;
+  height: 32px;
+  background: url("../img/keyboard_arrow_down-black-18dp.svg") no-repeat 190px;
 }
 
 .form-checkout__input--checkbox {
@@ -236,15 +245,6 @@ body {
   background-color: green;
 }
 
-.elo {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  font-size: 0.75rem;
-  height: 32px;
-  background: url("../img/keyboard_arrow_down-black-18dp.svg") no-repeat 190px;
-}
-
 .btn {
   display: block;
   width: 170px;
@@ -256,5 +256,39 @@ body {
   font-size: 1rem;
   color: white;
   cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  font-family: "Montserrat";
+  color: #4f4f4f;
+}
+
+:-ms-input-placeholder {
+  font-family: "Montserrat";
+  color: #4f4f4f;
+}
+
+::-ms-input-placeholder {
+  font-family: "Montserrat";
+  color: #4f4f4f;
+}
+
+::placeholder {
+  font-family: "Montserrat";
+  color: #4f4f4f;
+}
+
+@media (min-width: 1000px) {
+  .wrapper {
+    max-width: 1000px;
+  }
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    gap: 10%;
+    margin: 64px 5%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

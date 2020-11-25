@@ -69,6 +69,7 @@
               <span class="material-icons"> email </span>
               <label for="email" class="form-checkout__label">E-mail</label>
               <input
+                required
                 class="form-checkout__input"
                 type="email"
                 name="email"
@@ -80,6 +81,7 @@
               <span class="material-icons"> call </span>
               <label for="phone" class="form-checkout__label">Phone</label>
               <input
+                required
                 class="form-checkout__input"
                 type="tel"
                 name="phone"
@@ -92,6 +94,7 @@
               <span class="material-icons"> people_alt </span>
               <label for="name" class="form-checkout__label">Full name</label>
               <input
+                required
                 class="form-checkout__input"
                 type="text"
                 name="name"
@@ -103,6 +106,7 @@
               <span class="material-icons"> home </span>
               <label for="adress" class="form-checkout__label">Adress</label>
               <input
+                required
                 class="form-checkout__input"
                 type="text"
                 name="adress"
@@ -132,9 +136,10 @@
                   >Country</label
                 >
                 <select
+                  required
                   id="country"
                   name="country"
-                  class="form-checkout__input elo"
+                  class="form-checkout__input form-checkout__input--select"
                 >
                   <option value="" disabled selected>Your Country...</option>
                   <option value="poland">Poland</option>
@@ -150,11 +155,13 @@
                   >Postal code</label
                 >
                 <input
+                  required
                   class="form-checkout__input"
                   type="text"
                   name="postal"
                   id="postal"
                   placeholder="Your postal code..."
+                  pattern="[0-9]*"
                 />
               </div>
             </div>

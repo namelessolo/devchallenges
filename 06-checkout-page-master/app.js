@@ -5,8 +5,10 @@ baskets.forEach((basket) => basket.addEventListener("click", addRemoveProduct));
 function addRemoveProduct(e) {
   const btn = e.target.closest(".basket__btn");
   if (!btn) return;
+
   const amount = e.currentTarget.querySelector(".basket__amount");
   let amountVaule = amount.textContent;
+
   if (btn.matches(".plus")) {
     amountVaule++;
     amount.textContent = amountVaule;

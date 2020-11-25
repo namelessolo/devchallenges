@@ -150,7 +150,7 @@ body {
   }
 
   &__label {
-    color: $grey4;
+    color: $grey5;
     font-size: 0.625rem;
     margin-bottom: 5px;
   }
@@ -161,6 +161,14 @@ body {
     font-size: 0.75rem;
     padding: 8px 8px 8px 44px;
     margin-bottom: 17px;
+
+    &--select {
+      appearance: none;
+      font-size: 0.75rem;
+      height: 32px;
+      background: url("../img/keyboard_arrow_down-black-18dp.svg") no-repeat
+        190px;
+    }
 
     &--checkbox {
       appearance: none;
@@ -178,13 +186,6 @@ body {
   }
 }
 
-.elo {
-  appearance: none;
-  font-size: 0.75rem;
-  height: 32px;
-  background: url("../img/keyboard_arrow_down-black-18dp.svg") no-repeat 190px;
-}
-
 .btn {
   display: block;
   width: 170px;
@@ -196,4 +197,21 @@ body {
   font-size: 1rem;
   color: white;
   cursor: pointer;
+}
+
+::placeholder {
+  font-family: "Montserrat";
+  color: $grey5;
+}
+
+@media (min-width: 1000px) {
+  .wrapper {
+    max-width: 1000px;
+  }
+
+  .container {
+    flex-direction: row-reverse;
+    gap: 10%;
+    margin: 64px 5%;
+  }
 }
