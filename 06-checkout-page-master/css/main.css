@@ -215,7 +215,8 @@ body {
   border: 1px solid #828282;
   border-radius: 12px;
   font-size: 0.75rem;
-  padding: 8px 8px 8px 44px;
+  height: 40px;
+  padding-left: 44px;
   margin-bottom: 17px;
 }
 
@@ -223,8 +224,8 @@ body {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  font-family: "Montserrat";
   font-size: 0.75rem;
-  height: 32px;
   background: url("../img/keyboard_arrow_down-black-18dp.svg") no-repeat 190px;
 }
 
@@ -284,11 +285,39 @@ body {
   }
   .container {
     -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     gap: 10%;
     margin: 64px 5%;
+  }
+  .basket__title {
+    font-size: 2.25rem;
+  }
+  .basket__name {
+    font-size: 0.75rem;
+  }
+  .basket__price {
+    font-size: 1rem;
+  }
+  .basket__discount {
+    font-size: 0.75rem;
+  }
+  .basket__total {
+    font-size: 1.125rem;
+  }
+  .form-checkout__title {
+    font-size: 1.125rem;
+  }
+  .form-checkout__label {
+    font-size: 0.75rem;
+  }
+  .form-checkout__input {
+    border: 1px solid #828282;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    height: 50px;
+    margin-bottom: 17px;
   }
 }
 /*# sourceMappingURL=main.css.map */
