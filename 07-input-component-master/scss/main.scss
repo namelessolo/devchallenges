@@ -1,0 +1,66 @@
+@import "normalize";
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap");
+
+* {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.875rem;
+  color: $color2;
+}
+
+*::placeholder {
+  color: $color1;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10rem;
+}
+
+.input {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 12.5rem;
+  padding: 1rem;
+
+  &__text {
+    padding: 0.75rem 1.125rem;
+    border: 1px solid $color1;
+    border-radius: 8px;
+    margin-top: 4px;
+
+    &:hover {
+      border: 1px solid $color2;
+    }
+
+    &:focus {
+      border: 1px solid $color3;
+      outline: none;
+
+      & + label {
+        color: $color3;
+      }
+    }
+
+    &--error,
+    &--error:focus {
+      border: 1px solid $color4;
+
+      & + label {
+        color: $color4;
+      }
+    }
+    &--error:hover {
+      border: 1px solid $color2;
+      & + label {
+        color: $color2;
+      }
+    }
+
+    &--disabled {
+      background: $color5;
+      border: 1px solid $color6;
+      pointer-events: none;
+    }
+  }
+}
