@@ -22,12 +22,18 @@
   flex-direction: column-reverse;
   width: 12.5rem;
   padding: 1rem;
+  position: relative;
+
+  &--width {
+    width: 100%;
+  }
 
   &__text {
     padding: 0.75rem 1.125rem;
     border: 1px solid $color1;
     border-radius: 8px;
     margin-top: 4px;
+    margin-bottom: 18px;
 
     &:hover {
       border: 1px solid $color2;
@@ -62,5 +68,36 @@
       border: 1px solid $color6;
       pointer-events: none;
     }
+
+    &--left {
+      padding-left: 35px;
+    }
+    &--right {
+      padding-right: 35px;
+    }
+
+    &--sm {
+      padding: 0.625rem 0.75rem;
+    }
+
+    &--sm {
+      padding: 0.625rem 0.75rem;
+    }
+  }
+}
+
+.material-icons {
+  font-size: 1.125rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $color1;
+
+  &--left {
+    left: 26px;
+  }
+
+  &--right {
+    right: 26px;
   }
 }

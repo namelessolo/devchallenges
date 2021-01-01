@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/main.css" />
+
     <title>Document</title>
   </head>
   <body>
@@ -31,9 +36,58 @@
           type="text"
           class="input__text input__text--disabled"
           placeholder="Placeholder"
+          disabled
+        />
+        <label for="name3">Label</label>
+      </div>
+      <div class="input">
+        <span class="material-icons material-icons--left"> call </span>
+        <input
+          type="text"
+          class="input__text input__text--left"
+          placeholder="Placeholder"
           id="name3"
         />
         <label for="name3">Label</label>
+      </div>
+      <div class="input">
+        <span class="material-icons material-icons--right"> lock </span>
+        <input
+          type="text"
+          class="input__text input__text--right"
+          placeholder="Placeholder"
+          id="name4"
+        />
+        <label for="name4">Label</label>
+      </div>
+      <div class="input">
+        <input
+          type="text"
+          class="input__text input__text--sm"
+          placeholder="Placeholder"
+          id="name5"
+        />
+        <label for="name5">Label</label>
+      </div>
+      <div class="input input--width">
+        <input
+          type="text"
+          class="input__text"
+          placeholder="Placeholder"
+          id="name6"
+        />
+        <label for="name6">Label</label>
+      </div>
+      <div class="input">
+        <textarea
+          name=""
+          id="name7"
+          cols="40"
+          rows="4"
+          class="input__text"
+          placeholder="Placeholder"
+        ></textarea>
+        <label for="name7">Label</label>
       </div>
     </div>
   </body>

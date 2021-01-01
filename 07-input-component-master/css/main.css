@@ -385,6 +385,11 @@ template {
           flex-direction: column-reverse;
   width: 12.5rem;
   padding: 1rem;
+  position: relative;
+}
+
+.input--width {
+  width: 100%;
 }
 
 .input__text {
@@ -392,6 +397,7 @@ template {
   border: 1px solid #828282;
   border-radius: 8px;
   margin-top: 4px;
+  margin-bottom: 18px;
 }
 
 .input__text:hover {
@@ -427,5 +433,38 @@ template {
   background: #f2f2f2;
   border: 1px solid #e0e0e0;
   pointer-events: none;
+}
+
+.input__text--left {
+  padding-left: 35px;
+}
+
+.input__text--right {
+  padding-right: 35px;
+}
+
+.input__text--sm {
+  padding: 0.625rem 0.75rem;
+}
+
+.input__text--sm {
+  padding: 0.625rem 0.75rem;
+}
+
+.material-icons {
+  font-size: 1.125rem;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #828282;
+}
+
+.material-icons--left {
+  left: 26px;
+}
+
+.material-icons--right {
+  right: 26px;
 }
 /*# sourceMappingURL=main.css.map */
